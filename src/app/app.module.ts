@@ -29,6 +29,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ListBandaComponent } from './banda/list-banda/list-banda.component';
+import { EditBandaComponent } from './banda/edit-banda/edit-banda.component';
+import { AddBandaComponent } from './banda/add-banda/add-banda.component';
 
 
 
@@ -42,7 +45,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
     EditContatoComponent,
 
-    ListContatoComponent
+    ListContatoComponent,
+
+      ListBandaComponent,
+      EditBandaComponent,
+      AddBandaComponent,
+      ListBandaComponent
 
   ],
 

@@ -1,0 +1,116 @@
+
+<div class="pt-3 pb-2 mb-3 border-bottom">
+
+  <h2 class="h2">Editar banda</h2>
+
+</div>
+
+
+
+<form [formGroup]="bandaForm" (ngSubmit)="submitForm()" novalidate>
+
+  <div class="row">
+
+    <div class="col-lg-6 col-md-8 col-sm-12">
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3">
+
+          <label>Nome</label>
+
+          <input type="text" id="nome" class="form-control" formControlName="nome" required/>
+
+          <!-- errors-->
+
+          <p *ngIf="nome?.touched && nome?.invalid" class="error">
+
+            <sup>*</sup>Nome obrigatório
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3">
+
+          <label>ano</label>
+
+          <input
+
+            type="number"
+
+            formControlName="ano"
+
+            class="form-control"
+
+            required
+
+          />
+
+          <!-- errors-->
+
+          <p *ngIf="ano?.touched && ano?.invalid" class="error">
+
+            <sup>*</sup>Informe a ano
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3">
+
+          <label>estilo:</label>
+
+          <input
+
+            type="text"
+
+            formControlName="estilo"
+
+            class="form-control"
+
+            required
+
+          />
+
+          <!-- errors-->
+
+          <p *ngIf="estilo?.touched && estilo?.invalid" class="error">
+
+            <sup>*</sup>Informe estilo
+
+          </p>
+
+          <p *ngIf="estilo?.errors?.['pattern']" class="error">
+
+            <sup>*</sup>estilo musical
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="form-group text-end">
+
+        <button type="submit" class="btn btn-info mx-2" [disabled]="!bandaForm.valid">
+
+          Editar banda
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</form>
